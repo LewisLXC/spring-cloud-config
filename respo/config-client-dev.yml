@@ -1,3 +1,17 @@
-foo: foo version 1
-demo:
-  message: Hello Spring Config
+# foo: foo version 1
+# demo:
+#   message: Hello Spring Config
+
+server:
+  port: 8766
+
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+# Feign 是自带熔断器的，但默认是关闭的，打开
+feign:
+  hystrix:
+    enabled: true
