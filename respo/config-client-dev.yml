@@ -1,6 +1,9 @@
-# foo: foo version 1
-# demo:
-#   message: Hello Spring Config
+spring:
+  application:
+    name: cloud-feign
+  #服务链路追踪配置
+  zipkin:
+    base-url: http://localhost:9411
 
 server:
   port: 8766
